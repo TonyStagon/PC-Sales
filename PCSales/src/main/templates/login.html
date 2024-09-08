@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="container-fluid bg-dark">
+        <div class="container d-flex flex-wrap align-items-center justify-content-between py-3">
+          <a href="#" class="d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
+            <h1 class="fs-4 text-light">PCS SALE</h1>
+          </a>
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a th:href="@{/user/home}" class="nav-link text-light" >HOME</a>
+            </li>
+            <li class="nav-item"><a th:href="@{/user/customer_signup}"class="nav-link text-light">SIGN UP</a></li>
+          </ul>
+        </div>
+      </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-header text-center">
+                        <h3>LOGIN</h3>
+                    </div>
+                    <div class="card-body">
+                      <form th:action="@{/user/login}" method = "Post">
+
+                        <div class="form-group" >
+                            <label for="text">UserName:</label>
+                            <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter username" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">SUBMIT</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
